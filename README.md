@@ -69,53 +69,6 @@ project-root/
 
 ---
 
-##  Setup Instructions
-
-###  Prerequisites
-
-- **Node.js** (v16 or above)
-- **MongoDB** (local or Atlas)
-- **npm** or **yarn**
-
-----
-
-### ⚙️ Installation Steps
-
-#### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/your-username/collab-whiteboard.git
-cd collab-whiteboard
-```
-#### 2️⃣Backend setup
-
-```bash
-cd server
-npm install
-```
-Create a .env file inside the server/ directory:<br/>
-```env
-PORT= 8000 <br/>
-MONGODB_URI=your mongoDB connection string
-```
-
-#### 3️⃣Frontend Setup
-
-```bash
-cd ../client
-npm install
-```
-Create a .env file inside the client/ directory:<br/>
-```env
-VITE_BACKEND_URL=http://localhost:8000
-```
-
-#### Start the frontend:
-```bash
-npm run dev
-```
-----
-
 ## API Documentation
 | Method | Endpoint             | Description           |
 | ------ | -------------------- | --------------------- |
@@ -164,39 +117,6 @@ Content-Type: application/json
 ```
 -----
 
-##  Deployment Guide
-1. Deploy Backend
- Use platforms like:
-- vercel
-- Render 
-- Railway
-- [VPS or Docker Hosting]
-- 
-Ensure:
-- WebSocket transport enabled (transports: ['websocket'])
-- CORS properly configured
-- MongoDB URI (Atlas recommended) in environment
-
-Example .env for production:
-
-```env
-
-PORT=8000
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/whiteboard
-```
-2. Deploy Frontend
-Use:
-- Vercel
-- Netlify
-
-Set  ``` env VITE_BACKEND_URL=https://your-backend-url.com ``` in your .env.production.
-
-3. MongoDB Atlas
-- Create a cluster on MongoDB Atlas
-- Whitelist your backend IP
-- Replace local URI with Atlas URI in .env
-
--------
 
 ## ✅ Status
  - Join/Create room via code
